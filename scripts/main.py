@@ -190,10 +190,10 @@ def construct_prompt():
             f"Would you like me to return to being {config.ai_name}?",
             speak_text=True)
         should_continue = utils.clean_input(f"""Continue with the last settings?
-Name:  {config.ai_name}
-Role:  {config.ai_role}
-Goals: {config.ai_goals}
-Continue (y/n): """)
+                                            Name:  {config.ai_name}
+                                            Role:  {config.ai_role}
+                                            Goals: {config.ai_goals}
+                                            Continue (y/n): """)
         if should_continue.lower() == "n":
             config = AIConfig()
 
@@ -323,7 +323,7 @@ parse_arguments()
 logger.set_level(logging.DEBUG if cfg.debug_mode else logging.INFO)
 ai_name = ""
 prompt = construct_prompt()
-# print(prompt)
+print(prompt)
 # Initialize variables
 full_message_history = []
 result = None
